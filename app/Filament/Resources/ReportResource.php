@@ -45,8 +45,10 @@ class ReportResource extends Resource
                 ->required()
                 ->label('Engagement ID')
                 ->hidden(fn(string $operation): bool => $operation === 'edit'),
-                Forms\Components\FileUpload::make('mom')->label("MOM"),
+                Forms\Components\FileUpload::make('mom')->label("MOM")
+                ->preserveFilenames(),
                 Forms\Components\FileUpload::make('final_report')->label("Final Report")
+                ->preserveFilenames()
             ]);
     }
 

@@ -27,6 +27,8 @@ class IssueResource extends Resource
 
     protected static ?string $navigationGroup = 'Master';
 
+    protected static ?string $navigationLabel = 'Audit Rating';
+
     protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form

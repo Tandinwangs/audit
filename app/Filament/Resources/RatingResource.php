@@ -25,6 +25,8 @@ class RatingResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-star';
 
+    protected ?string $heading = 'Custom Page Subheading';
+
     protected static ?int $navigationSort = 7;
 
     public static function form(Form $form): Form
@@ -45,6 +47,9 @@ class RatingResource extends Resource
             Tables\Columns\TextColumn::make('address')
             ->label('Auditee')
                 ->searchable(),
+            Tables\Columns\TextColumn::make('unit')
+                ->label('Unit')
+                    ->searchable(),
             Tables\Columns\TextColumn::make('year')
                 ->label('Year')  
             ,

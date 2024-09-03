@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('filament_users', function (Blueprint $table) {
-            $table->foreignId('role')->constrained('roles')->default(1);
+            $table->unsignedBigInteger('role')->default(1);
+            $table->foreign('role')->references('id')->on('roles')->onDelete('cascade');
         });
     }
 

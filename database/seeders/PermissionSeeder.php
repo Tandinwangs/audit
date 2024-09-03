@@ -15,7 +15,19 @@ class PermissionSeeder extends Seeder
     public function run(): void
     {
         DB::table('permissions')->insert([
+            'name' => 'admin-users.view',
+            'guard_name' => 'filament',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'admin-users.create',
+            'guard_name' => 'filament',
+        ]);
+        DB::table('permissions')->insert([
             'name' => 'admin-users.update',
+            'guard_name' => 'filament',
+        ]);
+        DB::table('permissions')->insert([
+            'name' => 'admin-users.delete',
             'guard_name' => 'filament',
         ]);
         DB::table('permissions')->insert([
